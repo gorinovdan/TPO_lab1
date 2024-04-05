@@ -1,10 +1,11 @@
 package com.lasat.task1;
 
+import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.*;
+
 
 public class Task1 {
 
@@ -14,7 +15,7 @@ public class Task1 {
             throw new IllegalArgumentException("Argument out of range");
         }
         double result = 0;
-        for (int n = 0; n < 100; n++) {
+        for (int n = 0; n < 1000; n++) {
             double term = Math.pow(-1, n) * Math.pow(x, 2 * n + 1) / (2 * n + 1);
             result += term;
         }
